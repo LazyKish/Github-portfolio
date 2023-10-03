@@ -6,7 +6,7 @@
     <title>Kisshu ^w^</title>
     <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+    <!-- Custom CSS for color palette -->
     <style>
         body {
             background-color: rgb(20, 20, 20);
@@ -22,18 +22,19 @@
             background-color: transparent;
         }
         .navbar-dark .navbar-toggler-icon {
-            background-color: #00EAFF; 
+            background-color: #00EAFF; /* RGB(0, 234, 255) Hamburger Icon */
         }
         .navbar-dark .navbar-toggler {
-            border-color: #00EAFF; 
+            border-color: #00EAFF; /* RGB(0, 234, 255) Hamburger Border */
         }
+        /* Custom styles for the navigation links at the bottom */
         .bottom-nav {
             background-color: transparent;
             text-align: center;
             padding: 20px 0;
         }
         .glow-button {
-            color: #00EAFF; 
+            color: #00EAFF; /* RGB(0, 234, 255) Text */
             background-color: transparent;
             border: 2px solid transparent;
             padding: 0;
@@ -44,15 +45,15 @@
             transition: border-color 0.4s ease, color 0.4s ease;
         }
         .glow-button:hover {
-            color: rgb(255, 255, 255);
+            color: rgb(255, 255, 255); /* Change text color on hover */
             background-color: transparent;
-            border-color: #00EAFF; 
+            border-color: #00EAFF; /* RGB(0, 234, 255) Glow Border */
         }
         
         .big-title {
-            font-size: 10rem; 
+            font-size: 10rem; /* Adjust the size as needed */
             font-weight: bold;
-            color: #00EAFF; 
+            color: #00EAFF; /* RGB(0, 234, 255) Big Title Text */
             text-align: center;
             padding-top: 5%;
             font-family: 'VT323';
@@ -64,7 +65,7 @@
             left: 0;
             width: 100%;
             height: 120%;
-            border: 2px solid #00EAFF; 
+            border: 2px solid #00EAFF; /* RGB(0, 234, 255) */
             animation: glow 2s infinite alternate;
             
         }
@@ -77,6 +78,18 @@
                 opacity: 0;
             }
         }
+        @media (max-width: 767px) {
+            .big-title {
+                font-size: 3rem; /* Reduce font size for smaller screens */
+            }
+            .glow-button {
+                font-size: 0.8rem; /* Reduce button font size for smaller screens */
+            }
+            .glow-border {
+                width: 100%;
+                height: 200%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -87,15 +100,21 @@
     <div class="big-title">Kisshu ^w^</div>
 </div>
 
-<div class="bottom-nav">
-    <a href="index.html" class="glow-button">Home</a>
-    <a href="About.html" class="glow-button">About</a>
-    <a href="portfolio.html" class="glow-button">My Sample Works</a>
-    <a href="https://drive.google.com/drive/folders/1KD-ruYLDFtLjv3zOMoMjKdAXOQiN2z0K?usp=sharing" class="glow-button">My Animation</a>
-    <a href="https://drive.google.com/drive/folders/1dcuL7HXwpRWQOCYBb1jS7p6jxWJKrxnu?usp=sharing" class="glow-button">Certificates</a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="bottom-nav">
+                <a href="index.html" class="glow-button">Home</a>
+                <a href="About.html" class="glow-button">About</a>
+                <a href="portfolio.html" class="glow-button">My Sample Works</a>
+                <a href="https://drive.google.com/drive/folders/1KD-ruYLDFtLjv3zOMoMjKdAXOQiN2z0K?usp=sharing" class="glow-button" target="_blank">My Animation</a>
+                <a href="https://drive.google.com/drive/folders/1dcuL7HXwpRWQOCYBb1jS7p6jxWJKrxnu?usp=sharing" class="glow-button" target="_blank">Certificates</a>
+            </div>
+        </div>
+    </div>
 </div>
 
-
+<!-- Include Bootstrap JS and jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

@@ -1,0 +1,294 @@
+/* Reset styles and set the font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(20, 20, 20);
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+/* Custom styles for the header/navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    background-color: rgb(32, 32, 32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    box-shadow: 2px 2px 7px 1px rgb(0, 234, 255);
+    border: rgb(0, 234, 255);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Custom styles for the logo */
+.navbar .navbar-brand {
+    font-size: 3em;
+    font-weight: bold;
+    color: rgb(0, 234, 255);
+    user-select: none;
+    font-family: 'VT323';
+    text-shadow: 2px 2px rgb(255, 255, 255);
+}
+
+
+
+/* Custom styles for navigation links */
+.navbar .collapse .nav-item .nav-link {
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(0, 234, 255);
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background:  rgb(0, 234, 255);
+    border-radius: 5px;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.nav-link:hover::after {
+    transform-origin: center;
+    transform: scaleX(1);
+}
+
+
+
+.cover-photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    height: 500px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.cover-photo {
+    position: relative;
+    height: 250px; /* Adjust the height as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cover-photo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 100%; /* Hide the image within the container */
+    
+}
+
+.rounded-circle {
+    width: 300px; /* Adjust the size as needed */
+    height: 300px; /* Adjust the size as needed */
+    border: 3px solid #fff;
+    position: absolute;
+    bottom: -75px; /* Adjust the positioning as needed */
+    left: 50%; /* Adjust the positioning as needed */
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.profile-section {
+    text-align: center; /* Center-align user information */
+    padding: 20px;
+}
+
+.profile-section h2 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-top: 80px;
+    color: rgb(0, 234, 255);
+    font-family: 'VT323';
+
+
+}
+
+.profile-section p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ffffff; /* Adjust the text color as needed */
+}
+
+.post {
+    margin: 20px;
+    padding: 20px;
+    background-color:rgba(40, 40, 40, 0.72); /* Add a white background to posts */
+    border: 1px solid rgba(40, 40, 40, 0.72); /* Add a border to posts */
+    border-radius: 4px;
+}
+
+.post img {
+    width: 50%;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a slight shadow to posts */
+}
+
+.post p {
+    font-size: 16px;
+    margin-top: 10px;
+    color: rgb(0, 195, 255);
+}
+
+.post h5{
+    color: rgb(0, 195, 255);
+    font-family: 'VT323';
+}
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  
+} 
+
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position:static;
+  left: 40%;
+  top: 90%;
+  color: #ff0000;
+  font-size: 100px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Base styles for small screens (mobile-first) */
+.navbar {
+    padding: 10px;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+}
+
+.nav-link {
+    margin-left: 20px;
+}
+
+/* Styles for larger screens */
+@media screen and (min-width: 768px) {
+    .navbar {
+        padding: 20px;
+    }
+
+    .navbar-brand {
+        font-size: 2em;
+    }
+
+    .nav-link {
+        margin-left: 40px;
+    }
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: fit-content;
+  }
+}
+
+/* Hide the navbar when scrolled up */
+.navbar-hide {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show the navbar when scrolled down */
+.navbar-show {
+  transform: translateY(0);
+  transition: transform 1.5s ease-in-out;
+}
+
+.post-description.hidden {
+  display: none;
+}

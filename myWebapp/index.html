@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisshu ^w^</title>
+    <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: rgb(20, 20, 20);
+            position: relative;
+            overflow: hidden;
+        }
+        .jumbotron {
+            background-color: transparent;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .navbar {
+            background-color: transparent;
+        }
+        .navbar-dark .navbar-toggler-icon {
+            background-color: #00EAFF; 
+        }
+        .navbar-dark .navbar-toggler {
+            border-color: #00EAFF; 
+        }
+        .bottom-nav {
+            background-color: transparent;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .glow-button {
+            color: #00EAFF; 
+            background-color: transparent;
+            border: 2px solid transparent;
+            padding: 0;
+            margin: 0 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            transition: border-color 0.4s ease, color 0.4s ease;
+        }
+        .glow-button:hover {
+            color: rgb(255, 255, 255);
+            background-color: transparent;
+            border-color: #00EAFF; 
+        }
+        
+        .big-title {
+            font-size: 10rem; 
+            font-weight: bold;
+            color: #00EAFF; 
+            text-align: center;
+            padding-top: 5%;
+            font-family: 'VT323';
+            text-shadow: 2px 2px rgb(255, 255, 255);
+        }
+        .glow-border {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 120%;
+            border: 2px solid #00EAFF; 
+            animation: glow 2s infinite alternate;
+            
+        }
+        @keyframes glow {
+            0% {
+                border-width: 2px;
+            }
+            100% {
+                border-width: 10px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="glow-border"></div>
+
+<div class="jumbotron">
+    <div class="big-title">Kisshu ^w^</div>
+</div>
+
+<div class="bottom-nav">
+    <a href="index.html" class="glow-button">Home</a>
+    <a href="About.html" class="glow-button">About</a>
+    <a href="portfolio.html" class="glow-button">My Sample Works</a>
+    <a href="https://drive.google.com/drive/folders/1KD-ruYLDFtLjv3zOMoMjKdAXOQiN2z0K?usp=sharing" class="glow-button">My Animation</a>
+    <a href="https://drive.google.com/drive/folders/1dcuL7HXwpRWQOCYBb1jS7p6jxWJKrxnu?usp=sharing" class="glow-button">Certificates</a>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
